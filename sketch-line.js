@@ -228,12 +228,12 @@ function stopMorph() {
 function touchStarted() {
   const tx = touches[0]?.x ?? mouseX;
   const ty = touches[0]?.y ?? mouseY;
+
   if (mode === "line" && checkHit(tx, ty)) {
     startMorph(tx, ty);
+    // 不寫 return false，讓瀏覽器保留預設行為
   }
-  return false;
 }
-
 function touchEnded() {
   stopMorph();
 }
@@ -249,4 +249,3 @@ function mousePressed() {
 function mouseReleased() {
   stopMorph();
 }
-
