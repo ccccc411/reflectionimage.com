@@ -150,7 +150,7 @@ function isInsideBounds(x, y, b) {
 function handlePointer(px, py) {
   for (let blob of blobs) {
     if (blob.bounds && isInsideBounds(px, py, blob.bounds)) {
-      window.location.href = `./line.html#${blob.id}`;
+      window.location.href = `./line.html?id=${blob.id}`;
       break;
     }
   }
@@ -168,6 +168,7 @@ function touchStarted() {
   handlePointer(tx, ty);
   return false;
 }
+
 
 
 
