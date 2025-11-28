@@ -7,8 +7,35 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
     <script src="sketch-line.js"></script>
   </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #ffffff;
+      touch-action: none;
+    }
+    body {
+      overflow: hidden;
+    }
+    #back {
+      position: fixed;
+      left: 12px;
+      top: 12px;
+      z-index: 10;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #f5f5f5;
+      border: 1px solid #444;
+      font-size: 12px;
+      font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif;
+      text-decoration: none;
+    }
+  </style>
   <body>
     <a id="back" href="index.html">←</a>
-    <link rel="stylesheet" href="line-style.css" />
+    <link rel="stylesheet" href="style.css" />
   </body>
 </html>
