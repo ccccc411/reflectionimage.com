@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reflection Image</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #ffffff;
+        touch-action: none; /* 避免平板滑動整個頁面 */
+      }
+      body {
+        overflow: hidden;
+      }
+      #title {
+        position: fixed;
+        left: 16px;
+        top: 16px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont,
+          "Noto Sans TC", sans-serif;
+        font-size: 14px;
+        color: #333;
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+</html>
