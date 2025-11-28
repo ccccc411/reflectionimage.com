@@ -32,8 +32,10 @@ const timeScales = [
 // =========================================
 
 function getLineIdFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  return constrain(parseInt(params.get("id") || "0"), 0, 12);
+  const hash = window.location.hash || "#0"; // 例如 "#9"
+  const n = parseInt(hash.replace("#", ""), 10);
+  if (isNaN(n)) return 0;
+  return constrain(n, 0, 12);
 }
 
 function setup() {
@@ -247,3 +249,4 @@ function mousePressed() {
 function mouseReleased() {
   stopMorph();
 }
+
